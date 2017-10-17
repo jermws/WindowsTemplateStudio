@@ -3,33 +3,42 @@
   "classifications": [
     "Universal"
   ],
-  "name": "Telemetry",
-  "groupIdentity": "wts.Feat.Telemetry",
-  "identity": "wts.Feat.Telemtry.Prism",
-  "description": "Adds Hockey App telemetry for unhandled exceptions and page navigation.",
+  "name": "Computer Vision",
+  "groupIdentity": "wts.Feat.ComputerVision",
+  "identity": "wts.Feat.ComputerVision.Prism",
+  "description": "Adds Cognitive Services API to your project.",
   "tags": {
     "language": "C#",
     "type": "item",
     "wts.type": "feature",
     "wts.framework": "Prism",
     "wts.version": "1.0.0",
-    "wts.displayOrder": "8",
+    "wts.displayOrder": "9",
     "wts.group": "UserInteraction",
     "wts.licenses": "[Microsoft.Toolkit.Uwp](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/license.md)",
-    "wts.defaultInstance": "Telemetry",
+    "wts.defaultInstance": "ComputerVision",
     "wts.multipleInstance": "false",
     "wts.genGroup": "0",
     "wts.rightClickEnabled":"true"    
   },
-  "sourceName": "TelentryFeature",
+  "sourceName": "ComputerVisionFeature",
   "preferNameDirectory": true,
   "PrimaryOutputs": [
     {
-      "path": ".\\Services\\ITrackingService.cs"
+      "path": ".\\Services\\IComputerVisionRepository.cs"
     },
     {
-      "path": ".\\Services\\TrackingService.cs"
-    }
+      "path": ".\\Services\\ComputerVisionRepository.cs"
+    },
+    {
+      "path": ".\\Services\\IComputerVisionServiceProxy.cs"
+    },
+    {
+      "path": ".\\Services\\ComputerVisionServiceProxy.cs"
+    },
+    {
+      "path": ".\\Models\\ImageResponse.cs"
+    } 
   ],
   "symbols": {
     "wts.rootNamespace": {
