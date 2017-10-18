@@ -1,0 +1,62 @@
+﻿{
+  "author": "Microsoft",
+  "classifications": [
+    "Universal"
+  ],
+  "name": "Vision",
+  "groupIdentity": "wts.Page.ComputerVision",
+  "identity": "wts.Page.ComputerVision.Prism",
+  "description": "This page will add a page demonstrating computer vision processing to your application.",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "page",
+    "wts.framework": "Prism",
+    "wts.version": "1.0.0",
+    "wts.displayOrder": "10",
+    "wts.dependencies":"wts.Feat.CognitiveServicesVision.Prism",
+    "wts.genGroup": "0",
+    "wts.rightClickEnabled":"true" 
+  },
+  "sourceName": "VisionPage",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+    {
+      "path": ".\\Helpers\\CameraRotationHelper.cs"
+    },
+    {
+      "path": ".\\Assets\\Camera.png"
+    },
+    {
+      "path": ".\\Assets\\File.png"
+    },
+    {
+      "path": ".\\Converters\\BooleanToVisibilityConverter.cs"
+    },
+    {
+      "path": ".\\Views\\VisionPagePage.xaml"
+    },
+    {
+      "path": ".\\Views\\VisionPagePage.xaml.cs"
+    },
+    {
+      "path": ".\\ViewModels\\VisionPageViewModel.cs"
+    },
+    {
+      "path": ".\\Views\\CameraCaptureDialog.xaml.cs"
+    },
+    {
+      "path": ".\\Views\\CameraCaptureDialog.xaml"
+    }
+  ],
+  "symbols": {
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    }
+  }
+}

@@ -1,15 +1,13 @@
-﻿
-using Param_RootNamespace.Models;
+﻿using Param_RootNamespace.Models;
 using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Net.Http;
-using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace Param_RootNamespace.Services
 {
-    public class ComputerVisionServiceProxy : IComputerVisionServiceProxy
+    public class CognitiveServicesVisionServiceProxy : ICognitiveServicesVisionServiceProxy
     {
         readonly HttpClient client;
         string BaseServiceUrl = @"https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze";
@@ -18,7 +16,7 @@ namespace Param_RootNamespace.Services
         //readonly int count = 10;
         //readonly int searchOffset = 0;
         //readonly string safeSearch = "Moderate";
-        public ComputerVisionServiceProxy()
+        public CognitiveServicesVisionServiceProxy()
         {
             client = new HttpClient();
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
@@ -44,12 +42,12 @@ namespace Param_RootNamespace.Services
                 // Get the JSON response.
                 string jsonString = await response.Content.ReadAsStringAsync();
 
-                imageResponse = ComputerVisionDeserialize<ImageResponse>(jsonString, token => token["value"]);
+                imageResponse = Deserialize<ImageResponse>(jsonString, token => token["value"]);
             }
             return imageResponse;
         }
 
-        private T ComputerVisionDeserialize<T>(string json, Func<JToken, JToken> filter)
+        private T Deserialize<T>(string json, Func<JToken, JToken> filter)
         {
             if (string.IsNullOrEmpty(json)) return default(T);
 

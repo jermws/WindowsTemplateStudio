@@ -3,10 +3,10 @@
   "classifications": [
     "Universal"
   ],
-  "name": "Computer Vision",
-  "groupIdentity": "wts.Feat.ComputerVision",
-  "identity": "wts.Feat.ComputerVision.Prism",
-  "description": "Adds Cognitive Services API to your project.",
+  "name": "Cognitive Services Vision",
+  "groupIdentity": "wts.Feat.CognitiveServicesVision",
+  "identity": "wts.Feat.CognitiveServicesVision.Prism",
+  "description": "Adds a Cognitive Services Vision API Service to your project.",
   "tags": {
     "language": "C#",
     "type": "item",
@@ -16,25 +16,25 @@
     "wts.displayOrder": "9",
     "wts.group": "UserInteraction",
     "wts.licenses": "[Microsoft.Toolkit.Uwp](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/license.md)",
-    "wts.defaultInstance": "ComputerVision",
+    "wts.defaultInstance": "CognitiveServicesVision",
     "wts.multipleInstance": "false",
     "wts.genGroup": "0",
-    "wts.rightClickEnabled":"true"    
+    "wts.rightClickEnabled":"true"
   },
-  "sourceName": "ComputerVisionFeature",
+  "sourceName": "CognitiveServicesVision",
   "preferNameDirectory": true,
   "PrimaryOutputs": [
     {
-      "path": ".\\Services\\IComputerVisionRepository.cs"
+      "path": ".\\Services\\ICognitiveServicesVisionRepository.cs"
     },
     {
-      "path": ".\\Services\\ComputerVisionRepository.cs"
+      "path": ".\\Services\\CognitiveServicesVisionRepository.cs"
     },
     {
-      "path": ".\\Services\\IComputerVisionServiceProxy.cs"
+      "path": ".\\Services\\ICognitiveServicesVisionServiceProxy.cs"
     },
     {
-      "path": ".\\Services\\ComputerVisionServiceProxy.cs"
+      "path": ".\\Services\\CognitiveServicesVisionServiceProxy.cs"
     },
     {
       "path": ".\\Models\\ImageResponse.cs"

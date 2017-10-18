@@ -12,8 +12,8 @@ namespace Param_RootNamespace
         {
             base.ConfigureContainer();
 //{[{
-            Container.RegisterType<IComputerVisionRepository, ComputerVisionRepository>(new ContainerControlledLifetimeManager());
-            Container.RegisterType<IComputerVisionServiceProxy, ComputerVisionServiceProxy>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<ICognitiveServicesVisionRepository, CognitiveServicesVisionRepository>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<ICognitiveServicesVisionServiceProxy, CognitiveServicesVisionServiceProxy>(new ContainerControlledLifetimeManager());
 //}]}
         }
     }

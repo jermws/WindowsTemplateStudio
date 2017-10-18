@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="Param_ItemNamespace.Views.VisionPagePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="using:Param_ItemNamespace.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+        <Page.Resources>
+        <converters:BooleanToVisibilityConverter x:Name="BooleanToVisibilityConverter"/>
+    </Page.Resources>
+    <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+        <ScrollViewer>
+            <StackPanel Margin="10" Padding="10" VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                    <Button x:Name="takePhoto" Command="{Binding TakePhotoCommand}" Background="Transparent">
+                        <StackPanel>
+                            <Image Height="80" Width="80"  Source="ms-appx:///Assets/Camera.png" />
+                            <TextBlock Text="Take Photo"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="pickPhoto" Command="{Binding PickPhotoCommand}" Background="Transparent">
+                        <StackPanel>
+                            <Image Height="80" Width="80" Source="ms-appx:///Assets/file.png" />
+                            <TextBlock Text="Select Photo"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+                <ProgressBar Margin="30,0" Visibility="{x:Bind ViewModel.IsBusy, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}" IsIndeterminate="True" IsEnabled="{Binding IsBusy, Mode=OneWay}" Foreground="Black" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Margin="0,2,0,2">
+                        <TextBlock Text="Captions:"/>
+                        <TextBlock x:Name="captions" Margin="10,0,0,0" Text="{Binding Captions}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,2,0,2">
+                        <TextBlock Text="Tags:"/>
+                        <TextBlock x:Name="tags" TextWrapping="WrapWholeWords"  Margin="10,0,0,0" Text="{Binding Tags}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,2,0,2">
+                        <TextBlock Text="Image:"/>
+                        <TextBlock x:Name="imageInfo" Margin="10,0,0,0" Text="{Binding ImageInfo}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,2,0,2">
+                        <TextBlock Text="Colors:"/>
+                        <TextBlock x:Name="colors" Margin="10,0,0,0" Text="{Binding Colors}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,2,0,2">
+                        <TextBlock Text="Categories:"/>
+                        <TextBlock x:Name="categories" Margin="10,0,0,0" Text="{Binding Categories}"/>
+                    </StackPanel>
+                </Grid>
+                <Image x:Name="image" Source="{Binding PhotoUrl}"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
