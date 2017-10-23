@@ -11,8 +11,7 @@ namespace Param_RootNamespace.Services
     {
         readonly HttpClient client;
         string BaseServiceUrl = @"https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze";
-        readonly string apiKey = "40769889807c4774a375787fcebf1907";
-        string Uri;
+        readonly string apiKey = string.Empty;// TODO WTS Add Cognitive Services apiKey”
         //readonly int count = 10;
         //readonly int searchOffset = 0;
         //readonly string safeSearch = "Moderate";
