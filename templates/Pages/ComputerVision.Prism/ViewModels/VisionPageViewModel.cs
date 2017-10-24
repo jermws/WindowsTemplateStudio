@@ -21,7 +21,7 @@ namespace Param_ItemNamespace.ViewModels
         /// <summary>
         /// The _contact repository
         /// </summary>
-        private readonly ICognitiveServicesVisionRepository cognitiveServicesVisionRepository;
+        private readonly ICognitiveServicesVisionRepository<ImageResponse> cognitiveServicesVisionRepository;
 
         private ImageResponse _imageResponse;
         private byte[] _imageArray;
@@ -30,7 +30,7 @@ namespace Param_ItemNamespace.ViewModels
         /// Initializes a new instance of the <see cref="ICognitiveServicesVisionRepository" /> class.
         /// </summary>
         /// <param name="cognitiveServicesVisionRepository">The computer vision repository.</param>
-        public VisionPageViewModel(ICognitiveServicesVisionRepository cognitiveServicesVisionRepository)
+        public VisionPageViewModel(ICognitiveServicesVisionRepository<ImageResponse> cognitiveServicesVisionRepository)
         {
             this.cognitiveServicesVisionRepository = cognitiveServicesVisionRepository;
 

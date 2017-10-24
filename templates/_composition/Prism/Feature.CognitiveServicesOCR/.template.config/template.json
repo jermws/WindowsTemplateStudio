@@ -3,29 +3,29 @@
   "classifications": [
     "Universal"
   ],
-  "name": "Cognitive Services Vision",
-  "groupIdentity": "wts.Feat.CognitiveServicesVision",
-  "identity": "wts.Feat.CognitiveServicesVision.Prism",
-  "description": "Adds a Cognitive Services Vision API Service to your project.",
+  "name": "Cognitive Services OCR",
+  "groupIdentity": "wts.Feat.CognitiveServicesOCR",
+  "identity": "wts.Feat.CognitiveServicesOCR.Prism",
+  "description": "Adds a Cognitive Services OCR API Service to your project.",
   "tags": {
     "language": "C#",
     "type": "item",
     "wts.type": "feature",
     "wts.framework": "Prism",
     "wts.version": "1.0.0",
-    "wts.displayOrder": "9",
+    "wts.displayOrder": "10",
     "wts.group": "UserInteraction",
     "wts.licenses": "[Microsoft.Toolkit.Uwp](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/license.md)",
-    "wts.defaultInstance": "CognitiveServicesVision",
+    "wts.defaultInstance": "CognitiveServicesOCR",
     "wts.multipleInstance": "false",
     "wts.genGroup": "0",
     "wts.rightClickEnabled":"true"
   },
-  "sourceName": "CognitiveServicesVision",
+  "sourceName": "CognitiveServicesOCR",
   "preferNameDirectory": true,
   "PrimaryOutputs": [
     {
-      "path": ".\\Models\\ImageResponse.cs"
+      "path": ".\\Models\\TextImageResponse.cs"
     } 
   ],
   "symbols": {
