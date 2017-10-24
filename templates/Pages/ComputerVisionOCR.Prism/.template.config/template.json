@@ -1,0 +1,62 @@
+﻿{
+  "author": "Microsoft",
+  "classifications": [
+    "Universal"
+  ],
+  "name": "OCR",
+  "groupIdentity": "wts.Page.ComputerVisionOCR",
+  "identity": "wts.Page.ComputerVisionOCR.Prism",
+  "description": "This page will add a page demonstrating computer vision OCR processing to your application.",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "page",
+    "wts.framework": "Prism",
+    "wts.version": "1.0.0",
+    "wts.displayOrder": "11",
+    "wts.dependencies":"wts.Feat.CognitiveServicesOCR.Prism",
+    "wts.genGroup": "0",
+    "wts.rightClickEnabled":"true" 
+  },
+  "sourceName": "OCRPage",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+    {
+      "path": ".\\Helpers\\CameraRotationHelper.cs"
+    },
+    {
+      "path": ".\\Assets\\Camera.png"
+    },
+    {
+      "path": ".\\Assets\\File.png"
+    },
+    {
+      "path": ".\\Converters\\BooleanToVisibilityConverter.cs"
+    },
+    {
+      "path": ".\\Views\\OCRPagePage.xaml"
+    },
+    {
+      "path": ".\\Views\\OCRPagePage.xaml.cs"
+    },
+    {
+      "path": ".\\ViewModels\\OCRPageViewModel.cs"
+    },
+    {
+      "path": ".\\Views\\CameraCaptureDialog.xaml.cs"
+    },
+    {
+      "path": ".\\Views\\CameraCaptureDialog.xaml"
+    }
+  ],
+  "symbols": {
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    }
+  }
+}

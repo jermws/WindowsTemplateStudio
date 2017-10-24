@@ -36,7 +36,9 @@ namespace Param_RootNamespace
         {
             base.ConfigureContainer();
 //{[{
+            // Telemetry Service
             Container.RegisterType<ITrackingService, TrackingService>(new ContainerControlledLifetimeManager());
+            
 //}]}
         }
 

@@ -39,40 +39,11 @@ namespace  Param_RootNamespace.Services
 
                 // Get the JSON response.
                 string jsonString = await response.Content.ReadAsStringAsync();
-
-                // Test for Handwriting Service Call
-                // jsonString = await GetHandWritingResponseAsync(response, jsonString);
-
                 imageResponse = Deserialize(jsonString, token => token["value"]);
                
             }
             return imageResponse;
         }
-
-        // private async Task<string> GetHandWritingResponseAsync(HttpResponseMessage response, string jsonString)
-        // {
-        //     string localJsonString = jsonString;
-        //     HttpResponseMessage handWritingResponse;
-        //     if (typeof(T) == typeof(HandWritingImageResponse))
-        //     {
-        //         if (response.IsSuccessStatusCode)
-        //         {
-        //             string operationLocation = response.Headers.GetValues("Operation-Location").FirstOrDefault();
-
-        //             int i = 0;
-        //             do
-        //             {
-        //                 await Task.Delay(1000);
-
-        //                 handWritingResponse = await client.GetAsync(operationLocation);
-        //                 localJsonString = await handWritingResponse.Content.ReadAsStringAsync();
-        //                 ++i;
-        //             }
-        //             while (i < 10 && localJsonString.IndexOf("\"status\":\"Succeeded\"") == -1);
-        //         }
-        //     }
-        //     return localJsonString;
-        // }
 
         private T Deserialize(string json, Func<JToken, JToken> filter)
         {

@@ -12,6 +12,7 @@ namespace Param_RootNamespace
         protected override void ConfigureContainer()
         {
             base.ConfigureContainer();
+//^^
 //{[{
             //OCR Recognition
             string ocrBaseServiceUrl = @"https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr";
